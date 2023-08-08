@@ -23,10 +23,10 @@ def category_page(request, slug):
         request,
         'blog/post_list.html',
         {
-                    'post_list': post_list,
-                    'categorise': Category.objects.all(),
-                    'no_category_post_count': Post.objects.filter(category=None).count(),
-                    'category': category,
+                'post_list': post_list,
+                'categories': Category.objects.all(),
+                'no_category_post_count': Post.objects.filter(category=None).count(),
+                'category': category,
         }
     )
 
